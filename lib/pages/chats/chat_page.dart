@@ -37,7 +37,7 @@ class _ChatPageState extends State<ChatPage> {
           stretch: true,
           leading: IconButton(
             onPressed: () {
-              Navigator.of(context).pop(context);
+              // Navigator.of(context).pop(context);
             },
             icon: Icon(Icons.chevron_left),
             color: Colors.white,

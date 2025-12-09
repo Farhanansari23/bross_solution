@@ -21,8 +21,8 @@ class MyApp extends StatelessWidget {
       ),
       // home:  HomePage(),
       // home:  MenuPage(),
-      // home:  ProfilePage(),
-      home:  ChatPage(),
+      home:  ProfilePage(),
+      // home:  ChatPage(),
     );
   }
 }
