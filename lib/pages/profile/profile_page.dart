@@ -4,6 +4,8 @@ import 'package:bross_solution/resources/custom_text.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
+import 'about_me.dart';
+
 class ProfilePage extends StatefulWidget {
   const ProfilePage({super.key});
 
@@ -34,23 +36,61 @@ class _ProfilePageState extends State<ProfilePage> {
           ],
         ),
         SliverToBoxAdapter(
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+              CustomContainer(
+                  child: Icon(Icons.person,size: 80,),
+                height: 0.20,
+                width: 0.24,
+                // color: CustomColors.lightRed,
+                horizontalMargin: 8,
+                verticalMargin: 8,
+                borderRadius: 4,
+              ),
+              SizedBox(width: 8,),
+              Container(
+                // color: Colors.yellow,
+                height: MediaQuery.of(context).size.height*0.20,
+                width: MediaQuery.of(context).size.width*0.7,
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                      CustomText(text: 'Kailash Shrestha',isHeading: true,),
+                      SizedBox(height: 16,),
+                      CustomText(text: 'Membership Date : 2073-10-08',isContent: true,textOverflow:TextOverflow.ellipsis,maxLines: 2,),
+                      CustomText(text: 'Membership No: : 755491',isContent: true,textOverflow:TextOverflow.ellipsis,maxLines: 2,),
+                      CustomText(text: 'Mobile Number: 9852020620',isContent: true,textOverflow:TextOverflow.ellipsis,maxLines: 2,),
+                      CustomText(text: 'Address: Biratnagar MetrpolitanCity - 4, Morang',isContent: true,textOverflow:TextOverflow.ellipsis,maxLines: 2,),
+                  ],
+                ),
+              ),
+            ],
+          ),
+        ),
+        SliverToBoxAdapter(
           child: Column(
             children: [
               SizedBox(height: 16,),
-              CustomContainer(
-                width: 0.9,
-                  // verticalPad: 8,
-                  horizontalPad: 16,
-                  applyShadow: true,
-                  child: Row(
-                    children: [
-                      FaIcon(FontAwesomeIcons.circleInfo,color: CustomColors.lightRed,size: 32,),
-                      SizedBox(width: 16,),
-                      CustomText(text: 'About Me',size: 24,fontWeight: FontWeight.w600,),
-                     Spacer(),
-                     Icon(Icons.chevron_right,size: 32,color: CustomColors.lightRed,)
-                    ],
-                  ),
+              InkWell(
+                onTap: (){
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => PersonalInfo()));
+                },
+                child: CustomContainer(
+                  width: 0.9,
+                    // verticalPad: 8,
+                    horizontalPad: 16,
+                    applyShadow: true,
+                    child: Row(
+                      children: [
+                        FaIcon(FontAwesomeIcons.circleInfo,color: CustomColors.lightRed,size: 32,),
+                        SizedBox(width: 16,),
+                        CustomText(text: 'About Me',size: 24,fontWeight: FontWeight.w600,),
+                       Spacer(),
+                       Icon(Icons.chevron_right,size: 32,color: CustomColors.lightRed,)
+                      ],
+                    ),
+                ),
               ),
               SizedBox(height: 16,),
               CustomContainer(
