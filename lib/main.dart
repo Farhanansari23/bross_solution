@@ -1,3 +1,4 @@
+import 'package:bross_solution/pages/chats/chat_page.dart';
 import 'package:bross_solution/pages/home/home_page.dart';
 import 'package:bross_solution/pages/menu/menu_page.dart';
 import 'package:bross_solution/pages/profile/profile_page.dart';
@@ -20,7 +21,8 @@ class MyApp extends StatelessWidget {
       ),
       // home:  HomePage(),
       // home:  MenuPage(),
-      home:  ProfilePage(),
+      // home:  ProfilePage(),
+      home:  ChatPage(),
     );
   }
 }
