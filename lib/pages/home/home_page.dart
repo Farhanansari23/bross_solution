@@ -44,6 +44,14 @@ class _HomePageState extends State<HomePage> {
         showUnselectedLabels: true,
         items: [
           BottomNavigationBarItem(
+            icon: Icon(Icons.home),
+            label: "Home",
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.menu),
+            label: "Menu",
+          ),
+          BottomNavigationBarItem(
             icon: Icon(Icons.currency_exchange),
             label: "MemberShip",
           ),

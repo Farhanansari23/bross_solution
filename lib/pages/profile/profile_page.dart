@@ -56,12 +56,12 @@ class _ProfilePageState extends State<ProfilePage> {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                      CustomText(text: 'Kailash Shrestha',isHeading: true,),
+                      CustomText(text: 'Tony Stark',isHeading: true,),
                       SizedBox(height: 16,),
-                      CustomText(text: 'Membership Date : 2073-10-08',isContent: true,textOverflow:TextOverflow.ellipsis,maxLines: 2,),
-                      CustomText(text: 'Membership No: : 755491',isContent: true,textOverflow:TextOverflow.ellipsis,maxLines: 2,),
-                      CustomText(text: 'Mobile Number: 9852020620',isContent: true,textOverflow:TextOverflow.ellipsis,maxLines: 2,),
-                      CustomText(text: 'Address: Biratnagar MetrpolitanCity - 4, Morang',isContent: true,textOverflow:TextOverflow.ellipsis,maxLines: 2,),
+                      CustomText(text: 'Membership Date : 2042-10-08',isContent: true,textOverflow:TextOverflow.ellipsis,maxLines: 2,),
+                      CustomText(text: 'Membership No: : 1',isContent: true,textOverflow:TextOverflow.ellipsis,maxLines: 2,),
+                      CustomText(text: 'Mobile Number: 983456456',isContent: true,textOverflow:TextOverflow.ellipsis,maxLines: 2,),
+                    CustomText(text: 'Address: Los Angelas',isContent: true,textOverflow:TextOverflow.ellipsis,maxLines: 2,),
                   ],
                 ),
               ),
