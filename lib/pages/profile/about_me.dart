@@ -1,4 +1,5 @@
 import 'package:bross_solution/resources/custom_container.dart';
+import 'package:bross_solution/resources/custom_expansion_tile.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
@@ -44,39 +45,171 @@ class _PersonalInfoState extends State<PersonalInfo> {
           ),
         ),
         SliverToBoxAdapter(
-            child: Column(
-              children: [
-                SizedBox(height: 16,),
-                Container(
-                  height: MediaQuery.of(context).size.height*0.2,
-                  width: MediaQuery.of(context).size.width*0.4,
-                  color: CustomColors.lightRed,
-                ),
-                SizedBox(height: 16,),
-                CustomContainer(
-                  width: 1,
-                    borderRadius: 4,
-                    applyShadow: true,
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
+          child: Column(
+            children: [
+              SizedBox(height: 16),
+              Container(
+                height: MediaQuery.of(context).size.height * 0.2,
+                width: MediaQuery.of(context).size.width * 0.4,
+                // color: CustomColors.lightRed,
+                child: Icon(Icons.person,size: 80,),
+              ),
+              SizedBox(height: 16),
+              CustomContainer(
+                width: 1,
+                borderRadius: 4,
+                applyShadow: true,
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            CustomText(text: 'Kailash Shrestha',isHeading: true,),
-                            IconButton(onPressed: (){}, icon: FaIcon(FontAwesomeIcons.pen))
-                          ],
+                        CustomText(text: 'Kailash Shrestha', isHeading: true),
+                        IconButton(
+                          onPressed: () {},
+                          icon: FaIcon(FontAwesomeIcons.pen),
                         ),
-                        CustomText(text: 'Membership Date : 2073-10-08',isContent: true,textOverflow:TextOverflow.ellipsis,maxLines: 2,),
-                        CustomText(text: 'Membership No: : 755491',isContent: true,textOverflow:TextOverflow.ellipsis,maxLines: 2,),
-                        CustomText(text: 'Mobile Number: 9852020620',isContent: true,textOverflow:TextOverflow.ellipsis,maxLines: 2,),
-                        CustomText(text: 'Address: Biratnagar MetrpolitanCity - 4, Morang',isContent: true,textOverflow:TextOverflow.ellipsis,maxLines: 2,),
-
                       ],
                     ),
+                    CustomText(
+                      text: 'Membership Date : 2073-10-08',
+                      isContent: true,
+                      textOverflow: TextOverflow.ellipsis,
+                      maxLines: 2,
+                    ),
+                    CustomText(
+                      text: 'Membership No: : 755491',
+                      isContent: true,
+                      textOverflow: TextOverflow.ellipsis,
+                      maxLines: 2,
+                    ),
+                    CustomText(
+                      text: 'Mobile Number: 9852020620',
+                      isContent: true,
+                      textOverflow: TextOverflow.ellipsis,
+                      maxLines: 2,
+                    ),
+                    CustomText(
+                      text: 'Address: Biratnagar MetrpolitanCity - 4, Morang',
+                      isContent: true,
+                      textOverflow: TextOverflow.ellipsis,
+                      maxLines: 2,
+                    ),
+                  ],
                 ),
-              ],
-            ),),
+              ),
+              SizedBox(height: 16),
+              CustomExpansionTile(
+                  title: 'Academic Info',
+                  children: [
+                   DataTable(
+                       columns: [
+                         DataColumn(label: Text('Education')),
+                         DataColumn(label: Text('Board')),
+                         DataColumn(label: Text('Passed Year')),
+                       ],
+                       rows: [
+                         DataRow(
+                           cells: [
+                           DataCell(Text('Bachelors'),),
+                           DataCell(Text('NEB'),),
+                           DataCell(Text('2082'),),
+                         ],
+                         ),
+                         DataRow(
+                           cells: [
+                             DataCell(Text('Masters'),),
+                             DataCell(Text('SEE'),),
+                             DataCell(Text('2072'),),
+                           ],
+                         ),
+                         DataRow(
+                           cells: [
+                             DataCell(Text('Bachelors'),),
+                             DataCell(Text('HSEB'),),
+                             DataCell(Text('2072'),),
+                           ],
+                         ),
+                       ],
+                   ),
+                  ],
+              ),
+              SizedBox(height: 16),
+              CustomExpansionTile(
+                title: 'Career Info',
+                children: [
+                  DataTable(
+                    columns: [
+                      DataColumn(label: Text('Education')),
+                      DataColumn(label: Text('Board')),
+                      DataColumn(label: Text('Passed Year')),
+                    ],
+                    rows: [
+                      DataRow(
+                        cells: [
+                          DataCell(Text('Bachelors'),),
+                          DataCell(Text('NEB'),),
+                          DataCell(Text('2082'),),
+                        ],
+                      ),
+                      DataRow(
+                        cells: [
+                          DataCell(Text('Masters'),),
+                          DataCell(Text('SEE'),),
+                          DataCell(Text('2072'),),
+                        ],
+                      ),
+                      DataRow(
+                        cells: [
+                          DataCell(Text('Bachelors'),),
+                          DataCell(Text('HSEB'),),
+                          DataCell(Text('2072'),),
+                        ],
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+              SizedBox(height: 16),
+              CustomExpansionTile(
+                title: 'Certificates',
+                children: [
+                  DataTable(
+                    columns: [
+                      DataColumn(label: Text('Education')),
+                      DataColumn(label: Text('Board')),
+                      DataColumn(label: Text('Passed Year')),
+                    ],
+                    rows: [
+                      DataRow(
+                        cells: [
+                          DataCell(Text('Bachelors'),),
+                          DataCell(Text('NEB'),),
+                          DataCell(Text('2082'),),
+                        ],
+                      ),
+                      DataRow(
+                        cells: [
+                          DataCell(Text('Masters'),),
+                          DataCell(Text('SEE'),),
+                          DataCell(Text('2072'),),
+                        ],
+                      ),
+                      DataRow(
+                        cells: [
+                          DataCell(Text('Bachelors'),),
+                          DataCell(Text('HSEB'),),
+                          DataCell(Text('2072'),),
+                        ],
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+            ],
+          ),
+        ),
       ],
     );
   }
