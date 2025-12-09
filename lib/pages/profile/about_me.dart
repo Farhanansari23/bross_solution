@@ -1,0 +1,83 @@
+import 'package:bross_solution/resources/custom_container.dart';
+import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+
+import '../../resources/custom_color.dart';
+import '../../resources/custom_text.dart';
+
+class PersonalInfo extends StatefulWidget {
+  const PersonalInfo({super.key});
+
+  @override
+  State<PersonalInfo> createState() => _PersonalInfoState();
+}
+
+class _PersonalInfoState extends State<PersonalInfo> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(body: _body(context));
+  }
+
+  Widget _body(context) {
+    return CustomScrollView(
+      slivers: [
+        SliverAppBar(
+          title: Text(
+            "Personal Info",
+            style: TextStyle(
+              color: Colors.white,
+              fontSize: 32,
+              fontWeight: FontWeight.w600,
+            ),
+          ),
+          backgroundColor: CustomColors.darkBlue,
+          expandedHeight: 80,
+          floating: true,
+          stretch: true,
+          leading: IconButton(
+            onPressed: () {
+              Navigator.of(context).pop(context);
+            },
+            icon: Icon(Icons.chevron_left),
+            color: Colors.white,
+            iconSize: 48,
+          ),
+        ),
+        SliverToBoxAdapter(
+            child: Column(
+              children: [
+                SizedBox(height: 16,),
+                Container(
+                  height: MediaQuery.of(context).size.height*0.2,
+                  width: MediaQuery.of(context).size.width*0.4,
+                  color: CustomColors.lightRed,
+                ),
+                SizedBox(height: 16,),
+                CustomContainer(
+                  width: 1,
+                    borderRadius: 4,
+                    applyShadow: true,
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            CustomText(text: 'Kailash Shrestha',isHeading: true,),
+                            IconButton(onPressed: (){}, icon: FaIcon(FontAwesomeIcons.pen))
+                          ],
+                        ),
+                        CustomText(text: 'Membership Date : 2073-10-08',isContent: true,textOverflow:TextOverflow.ellipsis,maxLines: 2,),
+                        CustomText(text: 'Membership No: : 755491',isContent: true,textOverflow:TextOverflow.ellipsis,maxLines: 2,),
+                        CustomText(text: 'Mobile Number: 9852020620',isContent: true,textOverflow:TextOverflow.ellipsis,maxLines: 2,),
+                        CustomText(text: 'Address: Biratnagar MetrpolitanCity - 4, Morang',isContent: true,textOverflow:TextOverflow.ellipsis,maxLines: 2,),
+
+                      ],
+                    ),
+                ),
+              ],
+            ),),
+      ],
+    );
+  }
+}
