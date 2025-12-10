@@ -46,6 +46,7 @@ class _PersonalInfoState extends State<PersonalInfo> {
         ),
         SliverToBoxAdapter(
           child: Column(
+            // crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               SizedBox(height: 16),
               Container(
@@ -121,30 +122,21 @@ class _PersonalInfoState extends State<PersonalInfo> {
                 children: [
                   DataTable(
                     columns: [
-                      DataColumn(label: Text('Education')),
-                      DataColumn(label: Text('Board')),
-                      DataColumn(label: Text('Passed Year')),
+                      DataColumn(label: Text('Current / Prev Job')),
+                      DataColumn(label: Text('Date')),
                     ],
                     rows: [
                       DataRow(
                         cells: [
-                          DataCell(Text('Bachelors'),),
-                          DataCell(Text('NEB'),),
-                          DataCell(Text('2082'),),
+                          DataCell(Text('Marketing Agent'),),
+                          DataCell(Text('2072-on Going'),),
                         ],
                       ),
                       DataRow(
                         cells: [
-                          DataCell(Text('Masters'),),
-                          DataCell(Text('SEE'),),
-                          DataCell(Text('2072'),),
-                        ],
-                      ),
-                      DataRow(
-                        cells: [
-                          DataCell(Text('Bachelors'),),
-                          DataCell(Text('HSEB'),),
-                          DataCell(Text('2072'),),
+                          DataCell(Text('HR'),),
+                          DataCell(Text('2082 - ongoing'),),
+
                         ],
                       ),
                     ],
@@ -157,32 +149,24 @@ class _PersonalInfoState extends State<PersonalInfo> {
                 children: [
                   DataTable(
                     columns: [
-                      DataColumn(label: Text('Education')),
-                      DataColumn(label: Text('Board')),
-                      DataColumn(label: Text('Passed Year')),
+                      DataColumn(label: Text('Certificate')),
+                      DataColumn(label: Text('Obtained Date')),
                     ],
                     rows: [
                       DataRow(
                         cells: [
-                          DataCell(Text('Bachelors'),),
-                          DataCell(Text('NEB'),),
-                          DataCell(Text('2082'),),
+                          DataCell(Text('MultiPrise'),),
+                          DataCell(Text('2021'),),
+
                         ],
                       ),
                       DataRow(
                         cells: [
-                          DataCell(Text('Masters'),),
-                          DataCell(Text('SEE'),),
-                          DataCell(Text('2072'),),
+                          DataCell(Text('writing champ'),),
+                          DataCell(Text('2022'),),
                         ],
                       ),
-                      DataRow(
-                        cells: [
-                          DataCell(Text('Bachelors'),),
-                          DataCell(Text('HSEB'),),
-                          DataCell(Text('2072'),),
-                        ],
-                      ),
+
                     ],
                   ),
                 ],
